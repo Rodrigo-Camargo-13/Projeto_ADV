@@ -1,0 +1,125 @@
+.chat-juridico-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/background_blog.png") center/cover;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header com botão retornar + WhatsApp */
+  .chat-header {
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header h1 {
+    font-size: 24px;
+  }
+  
+  .chat-header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Botão Retornar */
+  .btn-retornar {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .btn-retornar:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Botão WhatsApp */
+  .btn-whatsapp {
+    background-color: #25D366;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #1DA851;
+  }
+  
+  /* Área de mensagens */
+  .chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .chat-message {
+    max-width: 60%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  /* Mensagens do bot */
+  .chat-message.bot {
+    background-color: #333;
+    align-self: flex-start;
+  }
+  
+  /* Mensagens do usuário */
+  .chat-message.usuario {
+    background-color: #ffba08;
+    color: black;
+    align-self: flex-end;
+  }
+  
+  /* Rodapé do chat */
+  .chat-footer {
+    padding: 15px 20px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.9);
+    gap: 10px;
+  }
+  
+  .chat-footer input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .btn-enviar {
+    background-color: #ffba08;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #e6a500;
+  }
+  

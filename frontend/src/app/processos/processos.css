@@ -1,0 +1,130 @@
+.processos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh; 
+  background: url("/public/background_processos.png") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  z-index: 1;
+}
+
+.processos-content {
+  position: relative; /* Para posicionar botão de forma absoluta dentro */
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #fff;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  opacity: 0.9;
+  color: #ccc;
+}
+
+/* Input */
+input {
+  width: 40%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Botão principal (Buscar) */
+button {
+  width: 40%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #007e7a, #007e7a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0056b3, #003d80);
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 20px;
+  width: 50%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.resultado h3 {
+  color: white;
+}
+
+.resultado p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Botão Voltar no canto inferior direito */
+.voltar-button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 200px;
+  padding: 12px;
+  font-size: 14px;
+  background: linear-gradient(90deg, #555, #333);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.voltar-button:hover {
+  background: linear-gradient(90deg, #444, #222);
+}

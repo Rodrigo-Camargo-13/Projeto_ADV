@@ -1,0 +1,309 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container principal */
+.financeiro-container {
+  display: flex;
+  /* Removido height: 100vh e overflow: hidden para evitar tarja inferior */
+  width: 100%;
+  background-color: #1c1e22;
+  color: #fff;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 80px;
+  background-color: #141619;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 180px; /* Ajuste se quiser */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  font-size: 22px;
+  color: #aaa;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.sidebar li:hover {
+  color: #fff;
+}
+
+/* Conteúdo principal */
+.financeiro-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Cabeçalho fixo */
+.financeiro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2d32;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.financeiro-header .date-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.financeiro-header .periodo-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Botão de retorno */
+.return-btn {
+  background-color: #1c1e21;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.return-btn:hover {
+  background-color: #333;
+}
+
+/* Indicadores Financeiros (KPIs Básicas) */
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.indicador {
+  background-color: #2d3035;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.indicador span {
+  display: block;
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.indicador h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* SEÇÃO DE BI AVANÇADO */
+.bi-avancado {
+  background-color: #2a2d32;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.bi-avancado h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.bi-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* KPIs Avançadas */
+.kpis-avancadas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.kpi-card {
+  background-color: #2d3035;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.kpi-card span {
+  display: block;
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.kpi-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Relatórios Preditivos */
+.relatorios-preditivos {
+  background-color: #2d3035;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.relatorios-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.relatorios-desc {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.relatorios-graficos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.relatorios-graficos .grafico {
+  background-color: #3b3f44;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.relatorios-graficos h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Heatmap */
+.heatmap-section {
+  background-color: #2d3035;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.heatmap-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.heatmap-desc {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.heatmap-container {
+  background-color: #3b3f44;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heatmap-container canvas {
+  max-width: 550px;
+  max-height: 550px;
+}
+
+/* Área de gráficos - Todos do mesmo tamanho */
+.graficos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 20px; /* para separar do BI Avançado */
+}
+
+.grafico {
+  background-color: #2d3035;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.grafico h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.grafico-pizza canvas {
+  max-width: 200px;
+  height: auto;
+}
+
+.grafico-barra canvas {
+  width: 100% !important;
+  height: 240px !important;
+}
+
+/* Removemos "max-height: calc(100vh - 100px);" e "overflow: hidden" 
+   para evitar tarja inferior */
+.financeiro-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .indicadores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kpis-avancadas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .relatorios-graficos {
+    grid-template-columns: 1fr;
+  }
+  .graficos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .indicadores {
+    grid-template-columns: 1fr;
+  }
+  .kpis-avancadas {
+    grid-template-columns: 1fr;
+  }
+  .financeiro-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

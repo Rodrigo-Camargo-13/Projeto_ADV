@@ -1,0 +1,144 @@
+/* Container principal: sidebar à esquerda e conteúdo à direita */
+.automacao-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1f2937; /* Fundo geral */
+  color: white;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px;
+  background-color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 220px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  color: white;
+  cursor: pointer;
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+.sidebar li:hover {
+  color: #00bcd4;
+}
+
+/* Área de conteúdo principal */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Topo (cabeçalho) */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-tipo-documento {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-tipo-documento:hover {
+  background-color: white;
+  color: #1f2937;
+}
+
+.btn-retornar {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-retornar:hover {
+  background-color: white;
+  color: #1f2937;
+}
+
+/* Card do formulário */
+.form-area {
+  background-color: #2d3748;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* input-line = campos em linha única */
+.input-line {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* row3 = linha com 3 colunas */
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* row4 = linha com 4 colunas */
+.row4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Label e Input */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1f2937;
+  border: 1px solid #4a5568;
+  color: white;
+  width: 100%;
+}
+
+/* Botão verde fixo no canto inferior direito */
+.confirmButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #28a745;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.confirmButton:hover {
+  background: #218838;
+}

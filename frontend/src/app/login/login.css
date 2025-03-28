@@ -1,0 +1,170 @@
+/* Estilos específicos para a página de Login */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ✅ Garante que nada extrapole a tela */
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* ✅ Remove qualquer rolagem */
+    background-color: #000; /* ✅ Remove qualquer fundo branco */
+}
+
+.login-page {
+    display: flex;
+    height: 100vh;
+    width: 100vw; /* ✅ Garante que ocupa toda a tela */
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-section {
+    flex: 1;
+    background-color: #000;
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+.form-section {
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+}
+
+.login-page .logo {
+    width: 250px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-left: -250px;
+}
+
+/* ✅ Centraliza corretamente o título */
+.login-page h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: -390px;
+}
+
+.login-page .form-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    margin-left: 120px;
+    margin-right: 30px;
+}
+
+/* Estilização do botão de login */
+.login-page .login-button {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 120px;
+}
+
+.login-page .login-button:hover {
+    background-color: #e68a00;
+}
+
+/* Estilização do botão de esqueci a senha */
+.login-page .forgot-password {
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+
+.login-page .forgot-password-button {
+    background: none;
+    border: none;
+    color: #ff9000;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.login-page .forgot-password-button:hover {
+    text-decoration: none;
+    color: #e68a00;
+}
+
+/* Botão de redirecionamento para cadastro */
+.login-page .register-link {
+    margin-top: 20px;
+    margin-left: -240px;
+}
+
+.login-page .register-button {
+    background: none;
+    border: none;
+    color: #ff9000;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-page .register-button:hover {
+    text-decoration: none;
+    color: #e68a00;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form-section {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .login-page .form-input {
+        max-width: 90%;
+    }
+
+    .login-page .login-button {
+        max-width: 100%;
+    }
+
+    .login-page .forgot-password-button {
+        font-size: 12px;
+    }
+
+    .login-page .register-button {
+        font-size: 12px;
+    }
+}

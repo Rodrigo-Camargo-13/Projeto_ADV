@@ -1,0 +1,166 @@
+.landing-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .landing-header {
+    position: relative;
+    margin: 50px 0 0 30px;
+  }
+  
+  .landing-logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .landing-title {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .landing-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .boxes-container {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .box {
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    background-color: #2d3748;
+  }
+  
+  .box-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .box span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .landing-footer {
+    background-color: #2f2f2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1rem;
+    gap: 30px;
+  }
+  
+  .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
+  
+  .footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-item a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Esconde painel administrativo em telas menores */
+  @media (max-width: 1024px) {
+    .boxes-container .box:nth-child(2) {
+      display: none;
+    }
+  }
+  
+  /* Ajustes para tablets e celulares */
+  @media (max-width: 768px) {
+    .landing-logo {
+      width: 120px;
+    }
+  
+    .landing-title {
+      font-size: 1.5rem;
+    }
+  
+    .boxes-container {
+      gap: 2rem;
+    }
+  
+    .box {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .box span {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Ajustes para celulares pequenos */
+  @media (max-width: 480px) {
+    .landing-logo {
+      width: 100px;
+    }
+  
+    .landing-title {
+      font-size: 1.2rem;
+    }
+  
+    .boxes-container {
+      gap: 1.5rem;
+    }
+  
+    .box {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .box span {
+      font-size: 0.9rem;
+    }
+  }
+  

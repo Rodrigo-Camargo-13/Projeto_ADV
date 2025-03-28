@@ -1,0 +1,135 @@
+/* Layout geral ocupando toda a tela, fundo escuro */
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #30343c; /* cor de fundo principal */
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  /* Barra lateral com ícones */
+  .sidebar {
+    width: 60px; 
+    background-color: #23262b;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Ícones do menu lateral */
+  .navIcon {
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .navIcon:hover {
+    color: #bfbfbf;
+  }
+  
+  /* Área principal (conteúdo) */
+  .mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Barra superior */
+  .topBar {
+    background-color: #30343c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #2b2e33; 
+  }
+  
+  /* Texto da saudação */
+  .welcome {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Botão "Retornar" */
+  .returnButton {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .returnButton:hover {
+    background-color: #fff;
+    color: #30343c;
+  }
+  
+  /* Barra que contém as buscas e o botão */
+  .searchBar {
+    background-color: #30343c;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #2b2e33; 
+  }
+  
+  /* Grupo para label + input */
+  .searchItem {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #ccc;
+  }
+  
+  .searchItem label {
+    margin-bottom: 4px;
+  }
+  
+  /* Inputs */
+  .inputText {
+    width: 180px;
+    background-color: #1f1f1f;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* Botão "Buscar Jurisprudencia" */
+  .searchButton {
+    background-color: #006eff;
+    border: none;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .searchButton:hover {
+    background-color: #0051bb;
+  }
+  
+  /* Container do resultado */
+  .resultContainer {
+    flex: 1; 
+    padding: 20px;
+    background-color: #2b2e33; 
+  }
+  
+  .resultTitle {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  /* Caixa grande onde o resultado é exibido */
+  .resultBox {
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 4px;
+    min-height: 550px;
+    padding: 10px;
+  }
+  

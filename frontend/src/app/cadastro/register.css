@@ -1,0 +1,83 @@
+/* Estilos específicos para a página de Cadastro */
+
+.register-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.register-container {
+    display: flex;
+    width: 100%;
+}
+
+.image-section {
+    flex: 1;
+    background-color: #000;
+}
+
+.register-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.form-section {
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+}
+
+/* ✅ O logo da página de cadastro agora é exclusivo */
+.register-page .logo {
+    width: 250px;
+    cursor: pointer;
+    margin-bottom: 100px;
+    margin-left: -500px;
+}
+
+/* ✅ O título da página de cadastro agora é exclusivo */
+.register-page h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    margin-left: -580px !important;
+    margin-top: 30px !important;
+}
+
+.register-page .form-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    margin-top: 5px;
+}
+
+.register-page .register-button {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-page .register-button:hover {
+    background-color: #e68a00;
+}

@@ -1,0 +1,152 @@
+.relatorios-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2c2c2c;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Sidebar ===== */
+.relatorios-sidebar {
+  width: 250px;
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 9999;
+}
+
+.relatorios-sidebar-logo img {
+  width: 200px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.relatorios-sidebar-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 50px;
+  width: 100%;
+  text-align: left;
+  margin-top: 50px
+}
+
+.relatorios-sidebar-menu li {
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 0;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease;
+  margin-left: -20px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.relatorios-sidebar-menu li:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* ===== Main content ===== */
+.relatorios-main-content {
+  flex: 1;
+  margin-left: 250px;
+  background-color: #343a40;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Header interno */
+.relatorios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #23272b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.relatorios-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grid */
+.relatorios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin-top:120px;
+}
+
+/* Card ampliado */
+.relatorios-card {
+  background-color: #1c1e21;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+.relatorios-card:hover {
+  transform: scale(1.05);
+  background-color: #444;
+}
+
+.relatorios-card span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .relatorios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .relatorios-card {
+    width: 85%;
+  }
+
+  .relatorios-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .relatorios-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .relatorios-main-content {
+    margin-left: 0;
+  }
+}

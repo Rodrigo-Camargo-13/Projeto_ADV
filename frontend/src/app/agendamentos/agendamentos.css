@@ -1,0 +1,211 @@
+/* ====== Container Principal ====== */
+.agendamentos-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: #444; /* Fundo sólido */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 300px;
+    background: #4a5568;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  
+  .sidebar h3 {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  
+  .sidebar select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #515252;
+    font-size: 14px;
+  }
+  
+  /* Calendário escuro */
+  .calendar-container {
+    width: 100%;
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .react-calendar {
+    background: rgba(30, 30, 30, 0.9);
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .react-calendar__tile--active {
+    background: #ffba00 !important;
+    color: black !important;
+  }
+  
+  /* ====== Conteúdo Agendamentos ====== */
+  .agendamentos-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #4a5568;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Cabeçalho no mesmo row */
+  .agendamentos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .agendamentos-header h2 {
+    color: #fcfcfc;
+    margin: 0; /* remove margem default para ficar alinhado */
+  }
+  
+  /* Botão de voltar */
+  .return-button {
+    background: #ffba00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .return-button:hover {
+    background: #ffba00;
+    color: #333;
+  }
+  
+  /* Botão Novo Agendamento */
+  .novo-agendamento {
+    background-color: #007e7a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .novo-agendamento:hover {
+    background-color: #ffba00;
+    color: #333;
+  }
+  
+  /* Tabela scroll */
+  .table-container {
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #333;
+  }
+  
+  thead {
+    background-color: #141414;
+    color: white;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+    color: white;
+  }
+  
+  .marcado {
+    background-color: #ffba00;
+    color: #333;
+  }
+  
+  .marcar,
+  .desmarcar {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .marcar {
+    background-color: #007e7a;
+    color: white;
+  }
+  
+  .marcar:hover {
+    background-color: #ffba00;
+    color: #333;
+  }
+  
+  .desmarcar {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .desmarcar:hover {
+    background-color: #ffba00;
+    color: #333;
+  }
+  
+  /* ====== Responsividade ====== */
+  @media (max-width: 1024px) {
+    .agendamentos-content {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+      height: auto;
+    }
+  
+    .agendamentos-content {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    th,
+    td {
+      padding: 8px;
+    }
+  }
+  

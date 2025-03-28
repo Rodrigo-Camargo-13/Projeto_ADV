@@ -1,0 +1,128 @@
+:root {
+  --sidebar-bg: #23262b;
+  --header-bg: #2f353c;
+  --panel-bg: #2f353c;
+  --border-color: #41464d;
+  --box-bg: #1f2227;
+  --text-color: #dcdcdc;
+  --highlight: #0d99ff;
+  --border-radius: 6px;
+  --input-bg: #2b2f36;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--panel-bg);
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+.processos-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--panel-bg);
+}
+
+.processos-sidebar {
+  width: 60px;
+  background-color: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.processos-navIcon {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.processos-navIcon:hover {
+  color: var(--highlight);
+}
+
+.processos-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.processos-topbar {
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.processos-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.processos-return {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid #ffffff60;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.processos-return:hover {
+  background-color: #ffffff;
+  color: var(--header-bg);
+}
+
+.processos-container {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--panel-bg);
+  overflow-y: auto;
+}
+
+.processos-container h2 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.processos-container input,
+.processos-container textarea {
+  width: 100%;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.processos-row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.processos-textareas {
+  flex: 1;
+}
+
+.processos-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .processos-row {
+    flex-direction: column;
+  }
+}

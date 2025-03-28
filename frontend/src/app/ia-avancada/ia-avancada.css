@@ -1,0 +1,302 @@
+:root {
+    /* Ajuste as cores conforme o padrão do seu sistema */
+    --sidebar-bg: #23262b;        /* barra lateral */
+    --header-bg: #2f353c;         /* barras superiores */
+    --panel-bg: #2f353c;          /* fundo principal */
+    --border-color: #41464d;      /* bordas */
+    --box-bg: #1f2227;            /* caixas internas */
+    --text-color: #dcdcdc;        /* texto geral */
+    --highlight: #0d99ff;         /* cor de destaque no hover */
+    --border-radius: 6px;         /* arredondamento */
+    --input-bg: #2b2f36;          /* fundo de inputs */
+  }
+  
+  /* Remove margens/paddings do body */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--panel-bg);
+    font-family: sans-serif;
+    color: var(--text-color);
+  }
+  
+  /* ----- LAYOUT PRINCIPAL ----- */
+  .layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--panel-bg);
+  }
+  
+  /* ----- SIDEBAR LATERAL (ÍCONES) ----- */
+  .sidebar {
+    width: 60px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .navIcon {
+    margin-bottom: 50px;
+    cursor: pointer;
+    margin-top: 60px;
+  }
+  .navIcon:hover {
+    color: var(--highlight);
+  }
+  
+  /* ----- ÁREA PRINCIPAL (barra superior + conteúdo) ----- */
+  .mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ----- BARRA SUPERIOR ----- */
+  .topBar {
+    background-color: var(--header-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .topBarTitle {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .returnButton {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid #ffffff60;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+  .returnButton:hover {
+    background-color: #ffffff;
+    color: var(--header-bg);
+  }
+  
+  /* ----- BARRA "ESCOLHER DOCUMENTO" E "SUBMETER" ----- */
+  .formBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .formBarLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .formBarLeft label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ccc;
+  }
+  .bigTextArea {
+    margin-top: 6px;
+    width: 600px; /* Ajuste conforme seu layout */
+    height: 80px;
+    resize: none;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 8px;
+    outline: none;
+  }
+  .submitButton {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid #ffffff60;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+  .submitButton:hover {
+    background-color: #ffffff;
+    color: var(--header-bg);
+  }
+  
+  /* ----- CONTEÚDO GERAL ABAIXO DA formBar ----- */
+  .pageContainer {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--panel-bg);
+    position: relative; /* para overlay de loading */
+    overflow-y: auto;
+  }
+  
+  /* ----- PAINEL COM BORDA E FUNDO ESCURO ----- */
+  .panel {
+    background-color: var(--header-bg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+  }
+  .panelTitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  
+  /* ----- CAMPOS ORIGINAIS: 3 inputs e 2 textareas ----- */
+  .resultRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .resultField {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .resultField label {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 500;
+  }
+  .inputField {
+    height: 34px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0 8px;
+    color: var(--text-color);
+    outline: none;
+  }
+  .textAreaField {
+    width: 100%;
+    height: 80px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 8px;
+    resize: none;
+    color: var(--text-color);
+    outline: none;
+    margin-bottom: 15px;
+  }
+  
+  /* ----- LOADING OVERLAY ----- */
+  .loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000055;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  /* ----- BOTÕES DE AÇÃO (Gerar PDF, Enviar etc.) ----- */
+  .actionButtons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .actionButton {
+    background-color: transparent;
+    border: 1px solid #ffffff60;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  .actionButton:hover {
+    background-color: #ffffff;
+    color: var(--header-bg);
+  }
+  
+  /* ----- EXPLICABILIDADE (caixa de texto) ----- */
+  .explainBox {
+    background-color: var(--box-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  /* ----- CHAT INTERATIVO ----- */
+  .chatContainer {
+    background-color: var(--box-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .chatBubble {
+    background-color: #3e444c;
+    padding: 6px 10px;
+    border-radius: 4px;
+    max-width: 70%;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .chatBubble.user {
+    align-self: flex-end;
+    background-color: #0d99ff;
+  }
+  .chatInput {
+    display: flex;
+    margin-top: 10px;
+    gap: 6px;
+  }
+  .chatInput input {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--box-bg);
+    color: var(--text-color);
+    padding: 6px;
+    outline: none;
+  }
+  .chatInput button {
+    background-color: transparent;
+    border: 1px solid #ffffff60;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 6px 12px;
+  }
+  .chatInput button:hover {
+    background-color: #ffffff;
+    color: var(--header-bg);
+  }
+  
+  /* ----- GRÁFICOS (linha, barras, pizza) ----- */
+  .sectionTitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .chartsRow {
+    display: flex;
+    gap: 220px;
+    flex-wrap: wrap; /* permite quebra de linha se necessário */
+  }
+  
+  .chartItem {
+    flex: 1;          /* divide espaço igualmente */
+    min-width: 250px; /* tamanho mínimo */
+    max-width: 300px; /* limite máximo (ajuste como preferir) */
+  }
+  
