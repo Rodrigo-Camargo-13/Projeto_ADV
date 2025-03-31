@@ -151,3 +151,69 @@
   border-top: 1px solid #292c2f;
   z-index: 2;
 }
+/* Ajustes mínimos para responsividade sem alterar a estrutura original */
+
+/* Telas pequenas (celular e tablets pequenos) */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.6rem !important; }
+  .hero p { font-size: 0.9rem !important; }
+  .features { flex-direction: column !important; }
+}
+
+/* Telas médias (tablets grandes e notebooks) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero h1 { font-size: 2rem !important; }
+  .hero p { font-size: 1rem !important; }
+}
+
+/* Telas grandes (acima de 1440px) - apenas pequenas correções de tamanho de texto */
+@media (min-width: 1440px) {
+  .hero h1 { font-size: 3rem !important; }
+  .hero p { font-size: 1.3rem !important; }
+  .features { gap: 40px !important; }
+
+}
+/* Garantir o footer no rodapé da página em telas grandes */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-shrink: 0; /* Não permite que o cabeçalho encolha */
+}
+
+.hero, .features {
+  flex-grow: 1; /* ocupa o espaço disponível */
+}
+
+.footer {
+  flex-shrink: 0; /* impede que o footer encolha */
+}
+.backgroundVideo {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover !important;
+  z-index: -2 !important;
+}
+
+.overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0,0,0,0.3) !important;
+  z-index: -1 !important;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden !important;
+}
