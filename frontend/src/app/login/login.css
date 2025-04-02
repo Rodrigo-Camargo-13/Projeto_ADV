@@ -1,170 +1,235 @@
 /* Estilos específicos para a página de Login */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* ✅ Garante que nada extrapole a tela */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden; /* ✅ Remove qualquer rolagem */
-    background-color: #000; /* ✅ Remove qualquer fundo branco */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
 }
 
 .login-page {
-    display: flex;
-    height: 100vh;
-    width: 100vw; /* ✅ Garante que ocupa toda a tela */
-    overflow: hidden;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .login-container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
 }
 
 .image-section {
-    flex: 1;
-    background-color: #000;
+  flex: 1;
+  background-color: #000;
 }
 
 .login-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(100%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
 }
 
 .form-section {
-    flex: 1;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    color: white;
+  flex: 1;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 60px;
+  color: white;
 }
 
+/* Logo */
 .login-page .logo {
-    width: 250px;
-    cursor: pointer;
-    margin-bottom: 40px;
-    margin-left: -250px;
+  width: 200px;
+  cursor: pointer;
+  margin-bottom: 40px;
 }
 
-/* ✅ Centraliza corretamente o título */
+/* Título */
 .login-page h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-left: -390px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
+/* Inputs */
 .login-page .form-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    font-size: 16px;
-    outline: none;
-    margin-left: 120px;
-    margin-right: 30px;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  outline: none;
 }
 
-/* Estilização do botão de login */
+/* Botão de login */
 .login-page .login-button {
-    width: 100%;
-    max-width: 250px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff9000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: 120px;
+  width: 100%;
+  max-width: 250px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
 }
 
 .login-page .login-button:hover {
-    background-color: #e68a00;
+  background-color: #e68a00;
 }
 
-/* Estilização do botão de esqueci a senha */
+/* Esqueci a senha */
 .login-page .forgot-password {
-    margin-bottom: 20px;
-    margin-left: 120px;
+  margin-bottom: 20px;
 }
 
 .login-page .forgot-password-button {
-    background: none;
-    border: none;
-    color: #ff9000;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
+  background: none;
+  border: none;
+  color: #ff9000;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
 }
 
 .login-page .forgot-password-button:hover {
-    text-decoration: none;
-    color: #e68a00;
+  text-decoration: none;
+  color: #e68a00;
 }
 
-/* Botão de redirecionamento para cadastro */
+/* Link de cadastro */
 .login-page .register-link {
-    margin-top: 20px;
-    margin-left: -240px;
+  margin-top: 20px;
+  text-align: left;
 }
 
 .login-page .register-button {
-    background: none;
-    border: none;
-    color: #ff9000;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: underline;
+  background: none;
+  border: none;
+  color: #ff9000;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
 }
 
 .login-page .register-button:hover {
-    text-decoration: none;
-    color: #e68a00;
+  text-decoration: none;
+  color: #e68a00;
 }
 
-/* Responsividade */
-@media screen and (max-width: 768px) {
-    .login-container {
-        flex-direction: column;
-        height: auto;
-    }
+/* ========== RESPONSIVIDADE ========== */
 
-    .form-section {
-        padding: 20px;
-        align-items: center;
-    }
+/* Celulares pequenos */
+@media (max-width: 600px) {
+  .login-page {
+    flex-direction: column;
+  }
 
-    .login-page .form-input {
-        max-width: 90%;
-    }
+  .image-section {
+    display: none;
+  }
 
-    .login-page .login-button {
-        max-width: 100%;
-    }
+  .form-section {
+    align-items: flex-start;
+    padding: 30px 20px;
+  }
 
-    .login-page .forgot-password-button {
-        font-size: 12px;
-    }
+  .login-page .logo {
+    width: 150px;
+  }
 
-    .login-page .register-button {
-        font-size: 12px;
-    }
+  .login-page h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-page .form-input {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .login-page .login-button {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
+  .login-page .forgot-password-button,
+  .login-page .register-button {
+    font-size: 12px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .login-page .logo {
+    width: 180px;
+  }
+
+  .login-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-page .form-input {
+    font-size: 16px;
+  }
+}
+
+/* Notebooks (13–15") */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .form-section {
+    padding: 40px 60px;
+  }
+
+  .login-page h2 {
+    font-size: 2rem;
+  }
+
+  .login-page .logo {
+    width: 200px;
+  }
+}
+
+/* Monitores grandes */
+@media (min-width: 1440px) {
+  .form-section {
+    padding: 60px 100px;
+  }
+
+  .login-page h2 {
+    font-size: 2.2rem;
+  }
+
+  .login-page .form-input {
+    max-width: 500px;
+  }
+
+  .login-page .login-button {
+    max-width: 400px;
+    font-size: 17px;
+    padding: 14px 24px;
+  }
+
+  .login-page .logo {
+    width: 220px;
+  }
 }

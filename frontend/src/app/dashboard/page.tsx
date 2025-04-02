@@ -40,6 +40,9 @@ const Dashboard = () => {
           <img src={logo.src} alt="Logo" />
         </div>
         <div className="dashboard-user-info">
+          <button className="back-button" onClick={() => router.push("/admin")}>
+            ⬅ Voltar
+          </button>
           <img src={userIcon.src} alt="User Avatar" />
           <span>Olá, {userName}</span>
         </div>

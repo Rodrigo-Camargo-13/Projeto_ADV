@@ -57,9 +57,9 @@ export default function BlogJuridico() {
 
       <footer className="blog-footer">
         <div className="contact-info">
-          <p>📞 +55 11 99999-9999</p>
-          <p>✉ contato@escritoriojuridico.com</p>
-          <p>🌐 www.escritoriojuridico.com</p>
+          <p>📞 +55 31 99897-7237</p>
+          <p>✉ comercial@dataaccent.com.br</p>
+          <p>🌐 www.legalmindpro.com</p>
         </div>
       </footer>
     </div>

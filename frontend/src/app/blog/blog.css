@@ -8,89 +8,83 @@
     align-items: center;
     padding: 0;
     overflow-y: auto;
-}
-
-/* Cabeçalho e rodapé expandidos conforme setas */
-.blog-header, .blog-footer {
+  }
+  
+  .blog-header, .blog-footer {
     width: 100%;
     padding: 20px 80px;
     background: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.blog-title {
+  }
+  
+  .blog-title {
     font-size: 26px;
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
-}
-
-.issue-number, .blog-category {
+  }
+  
+  .issue-number, .blog-category {
     color: #bbb;
-}
-
-/* Ajuste dos blocos de conteúdo */
-.blog-content {
+  }
+  
+  .blog-content {
     width: 100%;
     max-width: 1300px;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
     gap: 60px;
-}
-
-/* Separação clara entre blocos */
-.blog-section {
+  }
+  
+  .blog-section {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
-}
-
-.text-block {
+    flex-wrap: wrap;
+  }
+  
+  .text-block {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 280px;
-}
-
-/* Títulos destacados em amarelo */
-.highlight-title {
+  }
+  
+  .highlight-title {
     color: #ffba08;
     font-size: 22px;
     margin-bottom: 20px;
-}
-
-/* Ajuste afastando o texto do vídeo */
-.text-block p {
+  }
+  
+  .text-block p {
     font-size: 16px;
     color: #ddd;
     line-height: 1.8;
     text-align: justify;
-    padding-right: 40px; /* Espaço adicionado */
-}
-
-/* Alinhamento dos vídeos próximo à margem direita */
-.video-container {
+    padding-right: 40px;
+  }
+  
+  .video-container {
     width: 48%;
     display: flex;
     justify-content: flex-end;
     margin-right: -100px;
-}
-
-.video-container video {
+  }
+  
+  .video-container video {
     width: 100%;
     height: auto;
     max-height: 400px;
     border-radius: 10px;
-}
-
-/* Avaliações ajustadas */
-.reviews-section {
+  }
+  
+  .reviews-section {
     width: 100%;
     color: #fff;
     font-size: 17px;
@@ -99,30 +93,154 @@
     padding-left: 120px;
     padding-right: 200px;
     line-height: 2.0;
-}
-
-/* Cor amarela no título das avaliações */
-.reviews-section h2 {
+  }
+  
+  .reviews-section h2 {
     color: #ffba08;
     margin-bottom: 20px;
-}
-
-/* Espaço adicional entre comentários */
-.review-comment {
+  }
+  
+  .review-comment {
     margin-bottom: 20px;
-}
-
-/* Rodapé com conteúdo na horizontal conforme solicitado */
-.blog-footer {
+  }
+  
+  .blog-footer {
     flex-direction: row;
     justify-content: center;
     gap: 50px;
     margin-top: 100px;
-}
-
-.contact-info {
+  }
+  
+  .contact-info {
     display: flex;
     gap: 50px;
     font-size: 16px;
     align-items: center;
-}
+  }
+  
+  /* ================== RESPONSIVIDADE ================== */
+  
+  /* Telas muito pequenas */
+  @media (max-width: 480px) {
+    .blog-header, .blog-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 15px;
+    }
+  
+    .blog-title {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .blog-section {
+      flex-direction: column;
+    }
+  
+    .video-container {
+      width: 100%;
+      margin-right: 0;
+      justify-content: center;
+    }
+  
+    .text-block p {
+      padding-right: 0;
+    }
+  
+    .reviews-section {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+    }
+  
+    .blog-footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      align-items: flex-start;
+    }
+  }
+  
+  /* Celulares grandes / tablets pequenos */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .blog-title {
+      font-size: 22px;
+    }
+  
+    .blog-section {
+      flex-direction: column;
+    }
+  
+    .video-container {
+      width: 100%;
+      margin-right: 0;
+      justify-content: center;
+    }
+  
+    .text-block p {
+      padding-right: 0;
+    }
+  
+    .reviews-section {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    .blog-footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 15px;
+    }
+  }
+  
+  /* Tablets e notebooks médios */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .video-container {
+      margin-right: -50px;
+    }
+  
+    .reviews-section {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  
+  /* Notebooks grandes */
+  @media (min-width: 1025px) and (max-width: 1439px) {
+    .video-container {
+      margin-right: -80px;
+    }
+  
+    .reviews-section {
+      padding-left: 80px;
+      padding-right: 100px;
+    }
+  }
+  
+  /* Monitores grandes */
+  @media (min-width: 1440px) {
+    .reviews-section {
+      padding-left: 120px;
+      padding-right: 200px;
+    }
+  
+    .blog-title {
+      font-size: 28px;
+    }
+  
+    .highlight-title {
+      font-size: 24px;
+    }
+  }
+  

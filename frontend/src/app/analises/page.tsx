@@ -2,7 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import "./Analises.css";
+import "./analises.css";
 
 import logo from "/public/logo_data.png";
 import analiseAvancadaIcon from "/public/analise_avancada.png";

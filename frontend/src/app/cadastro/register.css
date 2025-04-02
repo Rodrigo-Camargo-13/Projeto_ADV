@@ -4,55 +4,58 @@
     display: flex;
     height: 100vh;
     overflow: hidden;
-}
-
-.register-container {
+    flex-direction: row;
+  }
+  
+  .register-container {
     display: flex;
     width: 100%;
-}
-
-.image-section {
+    flex-direction: row;
+  }
+  
+  /* Seção da imagem */
+  .image-section {
     flex: 1;
     background-color: #000;
-}
-
-.register-image {
+  }
+  
+  .register-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(50%);
-}
-
-.form-section {
+  }
+  
+  /* Seção do formulário */
+  .form-section {
     flex: 1;
     background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 40px 20px;
     color: white;
-}
-
-/* ✅ O logo da página de cadastro agora é exclusivo */
-.register-page .logo {
-    width: 250px;
+  }
+  
+  /* Logo */
+  .register-page .logo {
+    width: 200px;
     cursor: pointer;
-    margin-bottom: 100px;
-    margin-left: -500px;
-}
-
-/* ✅ O título da página de cadastro agora é exclusivo */
-.register-page h2 {
-    font-size: 34px;
+    margin-bottom: 40px;
+  }
+  
+  /* Título */
+  .register-page h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    margin-left: -580px !important;
-    margin-top: 30px !important;
-}
-
-.register-page .form-input {
+    text-align: center;
+  }
+  
+  /* Campos de formulário */
+  .register-page .form-input {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -61,13 +64,13 @@
     color: #000;
     font-size: 16px;
     outline: none;
-    margin-top: 5px;
-}
-
-.register-page .register-button {
+  }
+  
+  /* Botão */
+  .register-page .register-button {
     width: 100%;
     max-width: 350px;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     background-color: #ff9000;
@@ -76,8 +79,111 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.register-page .register-button:hover {
+  }
+  
+  .register-page .register-button:hover {
     background-color: #e68a00;
-}
+  }
+  
+  /* ================= RESPONSIVIDADE ================ */
+  
+  /* CELULARES PEQUENOS: esconde apenas a imagem lateral */
+  @media (max-width: 600px) {
+    .register-page {
+      flex-direction: column;
+    }
+  
+    .image-section {
+      display: none;
+    }
+  
+    .form-section {
+      padding: 30px 15px;
+    }
+  
+    .register-page .logo {
+      width: 150px;
+    }
+  
+    .register-page h2 {
+      font-size: 1.6rem;
+    }
+  
+    .register-page .form-input {
+      font-size: 15px;
+      padding: 10px;
+    }
+  
+    .register-page .register-button {
+      font-size: 15px;
+      padding: 10px 16px;
+    }
+  }
+  
+  /* TABLETS */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .register-page .logo {
+      width: 180px;
+    }
+  
+    .register-page h2 {
+      font-size: 1.8rem;
+    }
+  
+    .register-page .form-input {
+      font-size: 16px;
+    }
+  }
+  
+  /* TELAS GRANDES */
+  @media (min-width: 1440px) {
+    .form-section {
+      padding: 60px;
+    }
+  
+    .register-page h2 {
+      font-size: 2.2rem;
+      margin-left: -550px;
+    }
+  
+    .register-page .form-input {
+      max-width: 500px;
+    }
+  
+    .register-page .register-button {
+      max-width: 400px;
+      font-size: 17px;
+      padding: 14px 24px;
+    }
+    .register-page .logo {
+        width: 180px;
+        margin-left: -520px;
+      }
+  }
+   /* TELAS GRANDES */
+   @media (min-width: 1280px) and (max-width: 1439px) {
+    .form-section {
+      padding: 60px;
+    }
+  
+    .register-page h2 {
+      font-size: 2.2rem;
+      margin-left: -420px;
+    }
+  
+    .register-page .form-input {
+      max-width: 500px;
+    }
+  
+    .register-page .register-button {
+      max-width: 400px;
+      font-size: 17px;
+      padding: 14px 24px;
+    }
+    .register-page .logo {
+        width: 180px;
+        margin-left: -420px;
+      }    
+        
+  }
+
