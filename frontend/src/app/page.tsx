@@ -29,6 +29,7 @@ export default function Home() {
           <a href="/">Início</a>
           <a href="/login">Acessar Plataforma</a>
           <a href="/blog">Blog Jurídico</a>
+          <a href="/landing">Solução Jurídicanp</a>
         </nav>
       </header>
 
