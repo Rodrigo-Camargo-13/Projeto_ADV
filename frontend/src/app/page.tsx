@@ -1,5 +1,7 @@
 "use client";
+
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -14,6 +16,16 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
+      <Head>
+        <title>LegalMind Pro - Transforme seu Escritório com IA Jurídica</title>
+        <meta name="description" content="Plataforma jurídica com inteligência artificial para gestão de processos, clientes, documentos e relatórios. Aumente produtividade com tecnologia." />
+        <meta property="og:title" content="LegalMind Pro - IA Jurídica Integrada" />
+        <meta property="og:description" content="Software jurídico com inteligência artificial para transformar seu escritório." />
+        <meta property="og:image" content="https://legalmindpro.com/logo_data.png" />
+        <meta property="og:url" content="https://legalmindpro.com/" />
+        <meta property="og:type" content="website" />
+      </Head>
+
       <video className={styles.backgroundVideo} autoPlay muted loop playsInline>
         <source src="/background_2.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos HTML5.
@@ -29,7 +41,7 @@ export default function Home() {
           <a href="/">Início</a>
           <a href="/login">Acessar Plataforma</a>
           <a href="/blog">Blog Jurídico</a>
-          <a href="/landing">Solução Jurídicanp</a>
+          <a href="/landing">Solução Jurídica</a>
         </nav>
       </header>
 
